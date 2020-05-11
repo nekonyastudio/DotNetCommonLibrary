@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <RootNamespace>Nekonya</RootNamespace>
+    <AssemblyName>Nekonya.Common</AssemblyName>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Description>nekonya studio common library for .net standard</Description>
+    <Copyright>nekonya studio | yomunsam</Copyright>
+    <PackageProjectUrl>https://github.com/nekonyastudio/DotNetCommonLibrary</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/nekonyastudio/DotNetCommonLibrary</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
