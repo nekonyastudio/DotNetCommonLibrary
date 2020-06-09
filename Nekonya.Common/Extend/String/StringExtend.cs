@@ -61,5 +61,11 @@ namespace Nekonya
             return Encoding.UTF8.GetString(b);
         }
 
+        public static bool IsNullOrEmpty(this string str) 
+            => string.IsNullOrEmpty(str);
+
+        public static bool IsNullOrWhiteSpace(this string str)
+            => string.IsNullOrWhiteSpace(str);
+
     }
 }
