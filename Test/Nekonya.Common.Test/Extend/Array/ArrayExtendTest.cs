@@ -39,5 +39,32 @@ namespace Nekonya.Common.Test.Extend.Array
             });
             
         }
+
+
+        [Test]
+        public void AddElement()
+        {
+            string[] arr1 = { "hello" };
+            var newArr = arr1.Add("world");
+
+            Assert.IsTrue(newArr.Length == 2);
+            Assert.IsTrue(newArr[0].Equals(arr1[0]));
+            Assert.IsTrue(newArr[1].Equals("world"));
+        }
+
+        [Test]
+        public void AddRange()
+        {
+            string[] arr1 = { "hello" };
+            string[] arr2 = { "world", "meow" };
+
+            var newArr = arr1.AddRange(arr2);
+
+            Assert.IsTrue(newArr.Length == 3);
+            Assert.IsTrue(newArr[0].Equals(arr1[0]));
+            Assert.IsTrue(newArr[1].Equals(arr2[0]));
+            Assert.IsTrue(newArr[2].Equals(arr2[1]));
+        }
+
     }
 }

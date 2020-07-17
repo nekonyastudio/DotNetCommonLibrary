@@ -9,6 +9,7 @@
  * file that was distributed with this source code.
  */
 
+using Nekonya.Utils;
 using System;
 
 namespace Nekonya
@@ -40,6 +41,16 @@ namespace Nekonya
             {
                 each?.Invoke(i, arr[i]);
             }
+        }
+
+        public static T[] Add<T>(this T[] source, T element)
+        {
+            return ArrayUtil.Add(source, element);
+        }
+
+        public static T[] AddRange<T>(this T[] source , T[] ranges)
+        {
+            return ArrayUtil.Merge(source, ranges);
         }
 
     }
