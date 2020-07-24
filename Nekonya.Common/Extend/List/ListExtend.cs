@@ -23,11 +23,24 @@ namespace Nekonya
         /// <param name="list"></param>
         /// <param name="addItem"></param>
         /// <returns></returns>
-        public static bool AddIfNotExist<T>(IList<T> list, T addItem)
+        public static bool AddIfNotExist<T>(this IList<T> list, T addItem)
         {
             if (list.Contains(addItem)) return false;
             list.Add(addItem);
             return true;
+        }
+
+        /// <summary>
+        /// IList is null or IList count is 0.
+        /// </summary>
+        /// <param name="list"></param>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
+        public static bool IsNullOrEmpty<T>(this IList<T> list)
+        {
+            if(list == null)
+                return true;
+            return (list.Count == 0);
         }
     }
 }

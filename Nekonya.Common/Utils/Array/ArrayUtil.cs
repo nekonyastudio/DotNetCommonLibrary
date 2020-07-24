@@ -62,6 +62,14 @@ namespace Nekonya.Utils
             return merged;
         }
 
+        /// <summary>
+        /// Add element to array.
+        /// 添加元素到数组
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="element"></param>
+        /// <typeparam name="T">type</typeparam>
+        /// <returns></returns>
         public static T[] Add<T>(T[] source, T element)
         {
             long length = source.LongLength;

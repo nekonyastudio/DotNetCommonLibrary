@@ -16,17 +16,17 @@ namespace Nekonya
 {
     public static class ArrayExtend
     {
-        /// <summary>
-        /// Is array null or empty
-        /// </summary>
-        /// <param name="arr"></param>
-        /// <returns></returns>
-        public static bool IsNullOrEmpty(this Array arr)
-        {
-            if (arr == null) return true;
-            if (arr.Length == 0) return true;
-            return false;
-        }
+        // /// <summary>
+        // /// Is array null or empty
+        // /// </summary>
+        // /// <param name="arr"></param>
+        // /// <returns></returns>
+        // public static bool IsNullOrEmpty(this Array arr)
+        // {
+        //     if (arr == null) return true;
+        //     if (arr.Length == 0) return true;
+        //     return false;
+        // }
 
         
         /// <summary>
