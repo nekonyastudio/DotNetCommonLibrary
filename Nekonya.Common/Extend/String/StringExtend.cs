@@ -9,6 +9,7 @@
  * file that was distributed with this source code.
  */
 
+using Nekonya.Utils;
 using System;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -66,6 +67,11 @@ namespace Nekonya
 
         public static bool IsNullOrWhiteSpace(this string str)
             => string.IsNullOrWhiteSpace(str);
+
+        public static string GetMD5(this string str, bool lower = true, bool shortMD5 = false)
+        {
+            return EncryUtil.GetMD5(str, lower, shortMD5);
+        }
 
     }
 }

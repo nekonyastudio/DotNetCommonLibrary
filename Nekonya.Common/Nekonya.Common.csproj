@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
@@ -12,10 +12,10 @@
     <PackageProjectUrl>https://github.com/nekonyastudio/DotNetCommonLibrary</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nekonyastudio/DotNetCommonLibrary</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageVersion>1.0.2</PackageVersion>
+    <PackageVersion>1.0.3</PackageVersion>
     <Title>Nekonya.Common</Title>
     <Authors>yomunsam</Authors>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
