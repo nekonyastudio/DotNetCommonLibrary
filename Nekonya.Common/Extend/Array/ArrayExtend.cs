@@ -2,7 +2,7 @@
  * This file is part of the "Nekonya studio common library".
  * https://github.com/nekonyastudio/DotNetCommonLibrary
  *
- * (c) Nekonya Studio <yomunsam@gmail.com>
+ * (c) Nekonya Studio <me@yomunchan.moe> <yomunsam@nekonya.io>
  * https://nekonya.io
  *
  * For the full copyright and license information, please view the LICENSE

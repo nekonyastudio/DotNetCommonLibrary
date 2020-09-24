@@ -1,8 +1,18 @@
-﻿using System;
+﻿/*
+ * This file is part of the "Nekonya studio common library".
+ * https://github.com/nekonyastudio/DotNetCommonLibrary
+ *
+ * (c) Nekonya Studio <me@yomunchan.moe> <yomunsam@nekonya.io>
+ * https://nekonya.io
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Dynamic;
-using System.Text;
 
 namespace Nekonya
 {
@@ -39,6 +49,22 @@ namespace Nekonya
                 return true;
             }
             return false;
+        }
+
+        /// <summary>
+        /// If key not exist , add key-value , or override value.
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <typeparam name="TValue"></typeparam>
+        /// <param name="dict"></param>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        public static void AddOrOverride<TKey, TValue>(this IDictionary<TKey, TValue> dict, TKey key, TValue value)
+        {
+            if (!dict.ContainsKey(key))
+                dict.Add(key, value);
+            else
+                dict[key] = value;
         }
 
     }
