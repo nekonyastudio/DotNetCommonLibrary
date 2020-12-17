@@ -12,10 +12,10 @@
     <PackageProjectUrl>https://github.com/nekonyastudio/DotNetCommonLibrary</PackageProjectUrl>
     <RepositoryUrl>https://github.com/nekonyastudio/DotNetCommonLibrary</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageVersion>1.0.4</PackageVersion>
+    <PackageVersion>1.0.5</PackageVersion>
     <Title>Nekonya.Common</Title>
     <Authors>yomunsam</Authors>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <ItemGroup>
