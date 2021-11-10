@@ -11,23 +11,22 @@
 
 using System.Collections.Generic;
 
-namespace Nekonya
-{
-    public static class ListExtend
-    {
+namespace Nekonya;
 
-        /// <summary>
-        /// if key not exist, add it to list and return 'true',  or else return 'false'
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="list"></param>
-        /// <param name="addItem"></param>
-        /// <returns></returns>
-        public static bool AddIfNotExist<T>(IList<T> list, T addItem)
-        {
-            if (list.Contains(addItem)) return false;
-            list.Add(addItem);
-            return true;
-        }
+public static class ListExtend
+{
+
+    /// <summary>
+    /// if key not exist, add it to list and return 'true',  or else return 'false'
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <param name="list"></param>
+    /// <param name="addItem"></param>
+    /// <returns></returns>
+    public static bool AddIfNotExist<T>(IList<T> list, T addItem)
+    {
+        if (list.Contains(addItem)) return false;
+        list.Add(addItem);
+        return true;
     }
 }
