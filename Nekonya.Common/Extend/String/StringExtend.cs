@@ -2,13 +2,14 @@
  * This file is part of the "Nekonya studio common library".
  * https://github.com/nekonyastudio/DotNetCommonLibrary
  *
- * (c) Nekonya Studio <yomunsam@gmail.com>
+ * (c) Nekonya Studio <me@yomunchan.moe> <yomunsam@nekonya.io>
  * https://nekonya.io
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
 
+using Nekonya.Utils;
 using System;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -61,10 +62,15 @@ public static class StringExtend
         return Encoding.UTF8.GetString(b);
     }
 
-    public static bool IsNullOrEmpty(this string str) 
+    public static bool IsNullOrEmpty(this string str)
         => string.IsNullOrEmpty(str);
 
     public static bool IsNullOrWhiteSpace(this string str)
         => string.IsNullOrWhiteSpace(str);
+
+    public static string GetMD5(this string str, bool lower = true, bool shortMD5 = false)
+    {
+        return EncryUtil.GetMD5(str, lower, shortMD5);
+    }
 
 }
