@@ -36,7 +36,7 @@ public static class StringUtil
             random.NextBytes(bytes);
 
             var code = Replace(new[] { "/", "+", "=" }, string.Empty, Convert.ToBase64String(bytes));
-            ret.Append(code.Substring(0, Math.Min(size, code.Length)));
+            ret.Append(code[..Math.Min(size, code.Length)]);
         }
         return ret.ToString();
     }
@@ -51,8 +51,8 @@ public static class StringUtil
     /// <returns></returns>
     public static string Replace(string[] matches, string replace, string str)
     {
-        matches = matches ?? Array.Empty<string>();
-        replace = replace ?? string.Empty;
+        matches ??= Array.Empty<string>(); //matches = matches ?? Array.Empty<string>();
+        replace ??= string.Empty;
 
         if (string.IsNullOrEmpty(str))
         {

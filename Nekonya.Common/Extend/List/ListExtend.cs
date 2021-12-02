@@ -10,6 +10,7 @@
  */
 
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 
 namespace Nekonya;
 
@@ -37,7 +38,7 @@ public static class ListExtend
     /// <param name="list"></param>
     /// <typeparam name="T"></typeparam>
     /// <returns></returns>
-    public static bool IsNullOrEmpty<T>(this IList<T> list)
+    public static bool IsNullOrEmpty<T>([NotNullWhen(false)] this IList<T>? list)
     {
         if (list == null)
             return true;

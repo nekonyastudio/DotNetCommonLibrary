@@ -11,6 +11,7 @@
 
 using Nekonya.Utils;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -62,10 +63,10 @@ public static class StringExtend
         return Encoding.UTF8.GetString(b);
     }
 
-    public static bool IsNullOrEmpty(this string str)
-        => string.IsNullOrEmpty(str);
+    public static bool IsNullOrEmpty([NotNullWhen(false)] this string? source)
+        => string.IsNullOrEmpty(source);
 
-    public static bool IsNullOrWhiteSpace(this string str)
+    public static bool IsNullOrWhiteSpace([NotNullWhen(false)] this string? str)
         => string.IsNullOrWhiteSpace(str);
 
     public static string GetMD5(this string str, bool lower = true, bool shortMD5 = false)

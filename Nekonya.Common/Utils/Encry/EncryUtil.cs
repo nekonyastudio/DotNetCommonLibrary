@@ -27,7 +27,7 @@ public static class EncryUtil
     {
         MD5 md5Hash = MD5.Create();
         var data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(content));
-        StringBuilder str = new StringBuilder();
+        StringBuilder str = new();
         for (int i = 0; i < data.Length; i++)
         {
             str.Append(data[i].ToString(lower ? "x2" : "X2"));

@@ -28,12 +28,12 @@ public static class DictionaryExtend
 
     public static dynamic ToDynamic(this IDictionary dict)
     {
-        IDictionary<string, object> dy = new ExpandoObject();
+        IDictionary<string, object?> dy = new ExpandoObject();
         foreach (var key in dict.Keys)
         {
             var v1 = dict[key];
             var dyPropName = key.ToString();
-            if (!dy.ContainsKey(dyPropName))
+            if (dyPropName != null && !dy.ContainsKey(dyPropName))
             {
                 dy.Add(dyPropName, v1);
             }
